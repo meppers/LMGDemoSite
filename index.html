@@ -7,8 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--SEO-->
     <meta name="description" content="Who are we? We're a small Canadian company that creates reviews and videos for consumer technology. We educate and entertain our viewers with 10 videos a week spread across three YouTube channels. I guess you could think of us as the TopGear of consumer electronics.">
-
-    <?php include 'header.php'; ?>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <!--this changes the toolbar color in google chrome for mobile-->
+    <meta name="theme-color" content="rgb(227,79,23)">
+    <!--favicon image for browser tabs-->
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+    <!-- for chrome mobile, 192x192px png -->
+    <link rel="icon" sizes="192x192" href="img/icon.jpg">
+    <!-- reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="img/icon.jpg">
     <title>Linus Media Group</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
@@ -16,7 +23,14 @@
 
 <body>
 
-    <?php include 'navbar.php'; ?>
+    <!-- navbar -->
+    <div id="navigation"></div>
+    <script>
+        $(function() {
+            $("#navigation").load("navbar.html");
+        });
+
+    </script>
 
 
     <!--       carousel background color-->
@@ -128,14 +142,15 @@
             <div class="row txtCenter">
                 <div class="large-4 small-centered columns">
                     <a href="contact.php">Contact Us<br><br>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
-    
-    
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+
+
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/what-input.js"></script>
+        <script src="js/vendor/foundation.js"></script>
+        <script src="js/app.js"></script>
+</body>
+
 </html>
